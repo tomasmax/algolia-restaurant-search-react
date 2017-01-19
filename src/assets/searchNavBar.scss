@@ -1,0 +1,39 @@
+@import "variables";
+
+.search-nav-bar {
+  background-color: grey;
+  width: 100%;
+  padding: 1.6em 1.8em;
+  box-sizing: border-box;
+  
+  &:hover {
+    background-color: $hover-blue-color;
+  }
+
+  input {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    appearance: none;
+    background-color: white;
+    border: 0;
+    padding: 1em 2em;
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 700px) {
+  .search-nav-bar {
+    top: 0;
+    z-index: 99;
+    position: fixed;
+  }
+}
+
+@media (min-width: 1090px) {
+  .search-nav-bar {
+    z-index: 99;
+    position: relative;
+  }
+}

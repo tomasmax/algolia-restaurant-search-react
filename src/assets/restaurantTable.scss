@@ -1,0 +1,130 @@
+@import "variables";
+
+.restaurant-table {
+  margin: 2em 2em;
+  
+  .restaurant {
+    height: 150px;
+  }
+
+  .img-wrapper img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+  }
+
+  ul {
+    padding: 0;
+    margin-top: 2.4em;
+    list-style: none;
+  }
+
+  .restaurant-image {
+    float: left;
+  }
+
+  .restaurant_wrapper {
+    margin-left: 84px;
+    margin-top: -70px;
+  }
+
+  .restaurant_name {
+    font-weight: bold;
+  }
+
+  .restaurant_rating .rating-star {
+    width: 16px;
+    height: 16px;
+  }
+
+  .restaurant_rating_value {
+    font-weight: bold;
+    color: $restaurant-table-color;
+  }
+
+  .restaurant_rating_reviews_sum {
+    color: $grey-dark;
+  }
+
+  .restaurant_info {
+    font-size: .9em;
+    color: $grey-dark;
+  }
+
+  .restaurant_info > *,
+  .restaurant_rating > * {
+    display: inline-block;
+  }
+
+  .search-info {
+    text-align: center;
+
+    .search-info-nb {
+      font-weight: bold;
+    }
+  }
+
+  .show-more {
+    width: 200px;
+    color: $grey-dark;
+    padding: 0.8em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+    border: 2px solid $grey-dark;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .25s;
+    margin-bottom: 50px;
+
+    &:hover {
+      border: 2px solid $hover-blue-color;
+      color: $hover-blue-color;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .restaurant-table {
+    width: calc(100% - 250px);
+    margin-top: 80px;
+    padding-left: 220px;
+
+    .restaurant_wrapper {
+      margin-left: 100px;
+    }
+
+    .restaurant {
+      height: 120px;
+    }
+
+    .img-wrapper img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .search-info {
+      text-align: left;
+      padding-top: 2em;
+      .search-info-hr {
+        display: inline-block;
+        margin-left: 2em;
+        width: 30%;
+        height: 1px;
+        border-bottom: solid 1px $grey;
+      }
+    }
+  }
+}
+
+@media (min-width: 1090px) {
+  .restaurant-table {
+    position: absolute;
+    overflow-y: scroll;
+    top: 0px;
+    bottom: 0;
+    padding-left: 0;
+    left: 230px;
+  }
+}

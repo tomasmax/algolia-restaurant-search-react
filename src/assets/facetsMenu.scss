@@ -1,0 +1,123 @@
+@import "variables";
+
+.facets-menu {
+
+  text-align: left;
+
+  h2 {
+    color: $black;
+    font-size: 1em;
+    margin-top: 2em;
+    font-weight: bold;
+    margin-left: 1em;
+  }
+
+  ul {
+    margin-left: 1em;
+    list-style: none;
+    padding: 0 1em;
+
+    label,
+    li {
+      cursor: pointer;
+      padding: 3px 4px;
+
+      &:hover {
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-radius: 4px;
+        background-color: $hover-blue-color;
+        font-weight: bold;
+        color: $white;
+      }
+      &:hover ~ a {
+        color: $white;
+      }
+    }
+
+    li {
+      [type=checkbox] {
+        position: relative;
+        top: -2px;
+        margin-right: 9px;
+      }
+
+      input[type="checkbox"]:checked + label { 
+        border-radius: 4px;
+        text-color: $white;
+        background-color: $hover-blue-color;
+        font-weight: bold; 
+        color: $white;
+      } 
+    }
+
+    li,
+    li a {
+      color: $black;
+  
+      .facet-restaurant-sum {
+        vertical-align: middle;
+        float: right;
+        color: $grey;
+      }
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    .facet-checked {
+      border-radius: 4px;
+      text-color: $white;
+      background-color: $hover-blue-color;
+      font-weight: bold;
+      
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  .clear-facets {
+    color: $grey-dark;
+    padding: 0.4em;
+    text-align: center;
+    width: 75%;
+    font-size: 0.9em;
+    font-weight: 700;
+    border: 2px solid $grey-dark;
+    background-color: inherit;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .25s;
+
+    &:hover {
+      border: 2px solid $hover-blue-color;
+      color: $hover-blue-color;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .facets-menu {
+    position: fixed;
+    top: 81px;
+    border-right: 1px solid lightgrey;
+    width: 200px;
+    float: left;
+    padding-right: 1em;
+    overflow-y: scroll;
+  }
+}
+
+@media (min-width: 1090px) {
+  .facets-menu {
+    position: relative;
+    top: -19px;
+  }
+}
