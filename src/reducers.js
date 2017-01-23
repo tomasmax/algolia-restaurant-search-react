@@ -105,6 +105,17 @@ const foodTypes = (state = [], action) => {
   return state
 }
 
+const geolocation = (state = null, action) => {
+  if (action.type == actions.SET_GEOLOCATION) {
+    if (state == action.geolocation) {
+      return null
+    }
+    return action.geolocation
+  }
+
+  return state
+}
+
 const app = combineReducers({
   restaurants,
   query,
@@ -115,7 +126,8 @@ const app = combineReducers({
   pages,
   rating,
   nbHits,
-  searchTime
+  searchTime,
+  geolocation
 })
 
 export default app

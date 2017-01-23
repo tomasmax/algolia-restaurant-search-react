@@ -53,12 +53,24 @@ class RestaurantTable extends React.Component {
     this.props.dispatch(showNextPage())
   }
 
+  handleClear = event => {
+    event.preventDefault()
+    event.stopPropagation()
+    this.props.dispatch(clear())
+    this.props.dispatch(search())
+  }
+
   render() {
     if (!this.props.restaurants || !this.props.restaurants.length) {
       return (
         <div className="restaurant-table">
-          <ul>
-            No result found. You can clear facet refinements.
+          <ul className="no-hits">
+            No results found with the actual facet refinements. Try to clear them and search again!
+            <br/><br/>
+            <br/><br/>
+            <a href="#" className="no-hits-button" onClick={this.handleClear}>
+              Clear Facet Refinements
+            </a>
           </ul>
         </div>
       )

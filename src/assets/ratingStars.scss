@@ -20,9 +20,13 @@
 }
 
 .rating-checked {
-  outline-color: $hover-blue-color;
-  outline: -webkit-focus-ring-color auto 5px;
-  margin-right: 40px;
+
+  border: -webkit-focus-ring-color auto 10px;
+  margin-right: 37px;
+  padding-left: 2px;
+  border: 5px solid $hover-blue-color;
+  border-radius: 6px;
+  margin-left: -6px;
 }
 
 .rating-star {

@@ -78,10 +78,30 @@ export const clear = () => ({
   type: CLEAR
 })
 
+export const SET_GEOLOCATION = 'SET_GEOLOCATION'
+export const setGeolocation = geolocation => ({
+  type: SET_GEOLOCATION,
+  geolocation
+})
+
 export function removeFacets() {
   (dispatch) => {
     helper.clearRefinements()
     dispatch(clear())
+  }
+}
+
+export function geolocateBrowser() {
+  return (dispatch, getState) => {
+    //ask for geolocation in the browser
+    let position;
+    navigator.geolocation.getCurrentPosition(position => {
+            position = JSON.stringify(position);
+         },
+         (error) => alert(error.message),
+         {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+      )
+    dispatch(setGeolocation(position))
   }
 }
 
@@ -110,14 +130,7 @@ export function search() {
       })
     }
 
-    //ask for geolocation in the browser
-    let position;
-    navigator.geolocation.getCurrentPosition(position => {
-            position = JSON.stringify(position);
-         },
-         (error) => alert(error.message),
-         {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
-      )
+    const position = getState.geolocation
 
     //check if the user allowed to provide location from the browser
     if (position != null) {

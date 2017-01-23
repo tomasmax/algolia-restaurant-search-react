@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { search } from '../actions'
+import { search, geolocateBrowser } from '../actions'
 import SearchNavBar from './searchNavBar'
 import FacetsMenu from './facetsMenu'
 import RestaurantTable from './restaurantTable'
@@ -14,6 +14,7 @@ class App extends React.Component {
 
   //Just invoked immediately after the initial rendering occurs
   componentWillMount() {
+    this.props.dispatch(geolocateBrowser())
     this.props.dispatch(search())
   }
 

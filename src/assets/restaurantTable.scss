@@ -83,6 +83,35 @@
       color: $hover-blue-color;
     }
   }
+
+  .no-hits {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: $hover-blue-color;
+    margin-left: -55px;
+    margin-top: 105px;
+  }
+
+  .no-hits-button {
+    width: 200px;
+    color: $hover-blue-color;
+    padding: 0.8em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 700;
+    border: 2px solid $hover-blue-color;
+    margin: 0 auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .25s;
+
+    &:hover {
+      border: 2px solid $grey-dark;
+      color: $grey-dark;
+    }
+  
+  }
 }
 
 @media (min-width: 700px) {
