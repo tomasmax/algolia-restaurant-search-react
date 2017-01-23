@@ -22,7 +22,7 @@ export class Rating extends React.Component {
 
   render() {
 
-    const stars = [0,1,2,3,4]
+    const stars = [...Array(5).keys()]
     return (
       <div className={classNames('rating', { 'rating-checked' : this.props.checked, [`rating-${this.props.rating}`]: this.props.rating })} onClick={this.handleClick}>
         {stars.map(i =>
@@ -46,7 +46,7 @@ class RatingFacet extends React.Component {
   }
 
   render() {
-    const indexArray = [0,1,2,3,4,5]
+    const indexArray = [...Array(6).keys()]
     return (
       <div className='rating-facet'>
         {indexArray.map(i =>
