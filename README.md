@@ -1,5 +1,3 @@
-This is the solution to the Solution Engineering team at Algolia.
-
 I used React + redux, with algolia search helper js to develop a restaurant search demo webapp.
 
 In order to create `final_restaurants.json` file mixing all the data from `restaurants_list.json` and `restaurants_info.csv` I implemented a Ruby script.

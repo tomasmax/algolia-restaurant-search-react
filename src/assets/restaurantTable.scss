@@ -91,26 +91,37 @@
     color: $hover-blue-color;
     margin-left: -55px;
     margin-top: 105px;
-  }
+    -webkit-transform: ease-in;
+    -ms-transform: ease-in;
+    transform: ease-in;
+    transition-property: ease-in;
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    animation-delay: 2s;
 
-  .no-hits-button {
-    width: 200px;
-    color: $hover-blue-color;
-    padding: 0.8em;
-    text-align: center;
-    font-size: 1em;
-    font-weight: 700;
-    border: 2px solid $hover-blue-color;
-    margin: 0 auto;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all .25s;
+    .no-hits-button {
+      width: 200px;
+      color: $hover-blue-color;
+      padding: 0.8em;
+      text-align: center;
+      font-size: 1em;
+      font-weight: 700;
+      border: 2px solid $hover-blue-color;
+      margin: 0 auto;
+      border-radius: 4px;
+      cursor: pointer;
+      -webkit-transform: ease-in;
+      -ms-transform: ease-in;
+      transform: ease-in;
+      transition-property: ease-in;
+      -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+      animation-delay: 2s;
 
     &:hover {
       border: 2px solid $grey-dark;
       color: $grey-dark;
     }
   
+  }
   }
 }
 
